@@ -185,17 +185,25 @@ Create database in PostgreSQL:
 CREATE DATABASE studentdb;
 ```
 
-Create table:
+Create table with timestamp fields:
 
 ```sql
 CREATE TABLE students (
-id SERIAL PRIMARY KEY,
-name VARCHAR(100),
-email VARCHAR(100),
-course VARCHAR(100)
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    course VARCHAR(100) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 );
 ```
 
+Explanation:
+
+- `id` → Unique identifier for each student  
+- `name` → Student name  
+- `email` → Student email (must be unique)  
+- `course` → Course enrolled by the student  
+- `created_at` → Automatically stores when the record was created
 ---
 
 # 🔌 API Endpoints
