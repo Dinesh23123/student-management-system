@@ -209,18 +209,6 @@ DELETE | /students/:id | Delete student |
 
 ---
 
-# 📸 Screenshots
-
-(Add screenshots of your UI here)
-
-Example:
-
-- Student List Page
-- Add Student Form
-- Edit Student Page
-
----
-
 # 🔒 Environment Variables
 
 Sensitive data such as database credentials are stored in `.env`.
